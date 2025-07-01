@@ -1,0 +1,55 @@
+@use './variables.module.scss' as vars;
+
+.customInput {
+  &Container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  padding: 12px 16px;
+  border: 1px solid vars.$default-color;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  display: inline-block;
+
+  &:focus {
+    outline: none;
+    border-color: vars.$primary-color;
+  }
+
+  &::placeholder {
+    color: #999;
+  }
+
+  &ErrorMessage {
+    color: vars.$danger-color;
+  }
+}
+
+.customButton {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 16px;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &.primary {
+    background-color: vars.$primary-color;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: darken(vars.$primary-color, 10%);
+    }
+  }
+
+}

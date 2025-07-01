@@ -1,0 +1,9 @@
+$primary-color: #006be9;
+$default-color : #e4e9fa;
+$danger-color : #ff3535;
+ 
+:export {
+  primaryColor: $primary-color;
+  defaultColor : $default-color;
+  dangerColor : $danger-color
+}
